@@ -1,0 +1,16 @@
+{
+    "presets": ["es2015"],
+    "plugins":[
+      [
+        "module-resolver",
+        {
+          "root":[
+            "./"
+          ],
+          "alias": {
+            "~": "./"
+          }
+        }
+      ]
+    ]
+  }
