@@ -1,9 +1,13 @@
+import SessionService from "./user.session.service";
+
 export default class SessionController{
-     login(req, res){
-         let user = {
-             name: "diva",
-             country: "Singapore"
-         };
-        res.json(user);
+
+    constructor(){
+        this.sessionServ = new SessionService();
+    }
+
+    async login(req, res){
+        let users = await this.sessionServ.getUser();        
+        res.json(users);
     }
 }
